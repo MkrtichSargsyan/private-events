@@ -1,0 +1,9 @@
+<section style='background: #0a0000;'>
+  <% @users.each do |user| %>
+    <div class="d-flex justify-content-md-center" >
+      <div class= 'user_card col-4 border mb-3 rounded-circle' style='background: #ad5050;'>
+        <h3 class='card_username text-capitalize text-white font-italic'><%= user.name %></h3>
+      </div>
+    </div>
+  <% end %>
+</section>
