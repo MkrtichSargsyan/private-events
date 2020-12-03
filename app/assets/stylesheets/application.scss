@@ -7,7 +7,6 @@
 }
 
 body{
-  // background-color: rgba(0, 0, 0, 0.925);
   background-color: beige;
 }
 
@@ -23,5 +22,10 @@ body{
 
 .user_card{
   width: 31%;
+}
+
+.event_description{
+  background-color: burlywood;
+  box-shadow: 5px 5px 15px 5px #000000;
 }
 
