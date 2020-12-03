@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-gradient-dark">
   <div class="container p-0">
-    <h2 class='mr-3'><i>Private Events</i></h2>
+    <h2 class='mr-3'>
+      <i><%= link_to "Private Events", events_path,class:'text-white text-decoration-none' %></i>
+    </h2>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,7 +22,7 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <%= show_user_name(current_user) %>
+         <%= show_user_name(current_user) %>
       </ul>
     </div>
   </div>

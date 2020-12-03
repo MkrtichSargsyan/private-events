@@ -1,9 +1,19 @@
-<section style='background: #0a0000;'>
-  <% @users.each do |user| %>
-    <div class="d-flex justify-content-md-center" >
-      <div class= 'user_card col-4 border mb-3 rounded-circle' style='background: #ad5050;'>
-        <h3 class='card_username text-capitalize text-white font-italic'><%= user.name %></h3>
+<section class="container">
+  <div class='row'>
+    <% @users.each do |user| %>
+      <div class="user_card card text-center m-2">
+        <div class="card-header">
+          <h2><%= user.name %></h2>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </section>

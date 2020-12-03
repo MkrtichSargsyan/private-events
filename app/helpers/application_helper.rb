@@ -11,6 +11,14 @@ module ApplicationHelper
       "<li class='nav-item'>
         #{link_to 'Log in / Sign up', new_user_registration_path, class: 'nav-link text-white'}
       </li>".html_safe
-      end
+    end
+  end
+
+  def show_creator(event)
+    if signed_in?
+      "<h5 class='text-secondary'>Created by #{event.creator.name}</h5>".html_safe
+    else
+      "<h5 class='text-secondary'>Created by Anonymous</h5>".html_safe
+    end
   end
 end
