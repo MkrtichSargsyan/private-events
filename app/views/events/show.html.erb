@@ -17,7 +17,7 @@
     <p class='text-secondary m-0 mr-3 event_characteristics_width'>Location :</p>
     <h5 class='font-weight-bold mb-0'><%= @event.location %></h5>
   </div>
-  <button>Join</button>
+  <%= link_to 'Join', root_path,class:'btn btn-primary mb-4' %>
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-8 event_description">

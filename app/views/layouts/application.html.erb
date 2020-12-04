@@ -9,10 +9,9 @@
   </head>
   <body>
     <%= render 'layouts/navigation' %>
-    <% flash.each do |type, msg| %>
-      <div class="alert alert-info"><%= msg %></div>
-    <% end %>
+  
     <main class='container p-0'>
+      <%= render_flash_messages dismissible: true,class:'bg-danger text-white' %>
       <%= yield %>
     </main>
   </body>
