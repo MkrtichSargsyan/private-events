@@ -21,4 +21,15 @@ module ApplicationHelper
       "<h5 class='text-secondary'>Created by Anonymous</h5>".html_safe
     end
   end
+
+  def show_attendees(attendees)
+    result = '<p>No attendees yet</p>'
+    unless attendees.count.zero?
+      result = ''
+      attendees.each do |attendee|
+        result += "<div style='background-color: beige' class='rounded p-1 mb-1'>#{attendee.name}</div>"
+      end
+    end
+    result.html_safe
+  end
 end
