@@ -17,7 +17,7 @@
     <p class='text-secondary m-0 mr-3 event_characteristics_width'>Location :</p>
     <h5 class='font-weight-bold mb-0'><%= @event.location %></h5>
   </div>
-  <%= link_to 'Join', join_attendances_path(id:@event.id), class:'btn btn-primary mb-4',  method: :post %>
+  <%= show_registration_button(@event) %>
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-8 event_description">

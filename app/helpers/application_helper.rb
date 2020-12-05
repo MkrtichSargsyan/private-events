@@ -32,4 +32,12 @@ module ApplicationHelper
     end
     result.html_safe
   end
+
+  def show_registration_button(event)
+    if event.attendances.exists?(user_id: current_user.id)
+      "<p>Already signed in</p>".html_safe
+    else
+      "#{link_to 'Join', join_attendances_path(id:@event.id), class:'btn btn-primary mb-4',  method: :post}".html_safe
+    end
+  end
 end
