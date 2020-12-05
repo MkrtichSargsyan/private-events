@@ -17,7 +17,7 @@
     <p class='text-secondary m-0 mr-3 event_characteristics_width'>Location :</p>
     <h5 class='font-weight-bold mb-0'><%= @event.location %></h5>
   </div>
-  <%= link_to 'Join', root_path,class:'btn btn-primary mb-4' %>
+  <%= link_to 'Join', join_attendances_path(id:@event.id), class:'btn btn-primary mb-4',  method: :post %>
   <div class="container">
     <div class="row justify-content-between">
       <div class="col-8 event_description">
@@ -31,7 +31,7 @@
       </div>
       <div class="col-3 event_description">
         <h2>Attendees</h2>
-        <%= show_attendees(@attendees)  %>      
+        <%= show_attendees(@attendees)  %>
       </div>
     </div>
   </div>
