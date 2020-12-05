@@ -9,9 +9,8 @@
   </head>
   <body>
     <%= render 'layouts/navigation' %>
-  
     <main class='container p-0'>
-      <%= render_flash_messages dismissible: true,class:'bg-danger text-white' %>
+      <%= render_flash_messages dismissible: true,class:'bg-primary text-white' %>
       <%= yield %>
     </main>
   </body>
