@@ -1,0 +1,20 @@
+<section class="container">
+  <h1 class="text-center">Listing past events</h1>
+  <div class='row'>
+    <%@past_events and @past_events.each do |event| %>
+      <div class="user_card card text-center m-2">
+        <div class="card-header bg-dark text-white  ">
+          <h2><%= event.title %></h2> 
+          <%= show_creator(event) %>         
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= event.desc %></p>
+          <%= link_to 'Show more', event_path(event),class:'btn btn-primary' %>
+        </div>
+        <div class="card-footer text-white bg-dark">
+          Created at <%= time_ago_in_words(event.created_at) %> ago
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
