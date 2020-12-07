@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get 'events/upcoming', to: 'events#show_upcoming'
   get 'events/past', to: 'events#show_past'
 
@@ -15,5 +14,3 @@ Rails.application.routes.draw do
 
   root 'users#index'
 end
-
-# match 'photos/:user' => 'photos#user', :as => :user_photo
