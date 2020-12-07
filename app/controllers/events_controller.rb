@@ -8,7 +8,6 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    # byebug
     @attendees = @event.attendees
   end
 
@@ -20,7 +19,6 @@ class EventsController < ApplicationController
     @event = current_user.created_events.build(event_params)
     @event.save
     if @event.save
-      byebug
       redirect_to @event, notice: "Your event was created"
     else
       render :new
