@@ -7,11 +7,8 @@
           <h5><%= user.email %></h5>
         </div>
         <div class="card-body">
-          <div>
-            <p>Created events - <%= user.created_events.count %> </p>
-            <p>Joined events - <%= user.created_events.count %> </p>
-          </div>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p>Created events - <%= user.created_events.count %> </p>
+          <p>Joined events - <%= user.attendances.count %> </p>
         </div>
         <div class="card-footer text-muted">
           2 days ago

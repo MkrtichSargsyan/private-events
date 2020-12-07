@@ -6,12 +6,13 @@
   <div class='d-flex align-items-center'>
     <p class='text-secondary m-0 mr-3 event_characteristics_width'>Created by :</p>
     <h5 class='font-weight-bold mb-0'>
-      <%= link_to @event.creator.name, user_path(@event.creator) %>
+      <%= @event.creator.name %>
     </h5>
   </div>
   <div class='d-flex align-items-center'>
     <p class='text-secondary m-0 mr-3 event_characteristics_width'>Date :</p>
-    <h5 class='font-weight-bold mb-0'><%= @event.date.strftime("%d %b, %Y at %l:%M %p") %></h5>
+    <h5 class='font-weight-bold mb-0'><%= @event.date.strftime("%d %b, %Y at %l:%M %p") %></h5> 
+    <%# <h5 class='font-weight-bold mb-0'><%= @event.date.strftime("%B %-d, %Y") %></h5> 
   </div>
   <div class='d-flex align-items-center mb-4'>
     <p class='text-secondary m-0 mr-3 event_characteristics_width'>Location :</p>

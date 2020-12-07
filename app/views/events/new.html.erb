@@ -1,0 +1,24 @@
+<section>
+  <%= form_with model: @event, local: true do |f| %>
+    <% if @event.errors.any? %>
+      <ul>
+        <% @event.errors.full_messages.each do |error| %>
+          <li> <%= error %> </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <div class="form-group">
+      <%= f.text_field :title, placeholder: "Event title", class: "form-control"  %>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :desc, placeholder: "Event description", class: "form-control"  %>
+    </div>
+    <div class="form-group">
+      <%= f.date_field :date, class: "form-control"  %>
+    </div>
+    <div class="form-group">
+      <%= f.text_field :location, placeholder: "Event location", class: "form-control"  %>
+    </div>
+    <%= f.submit class: "btn btn-outline-primary" %>
+  <% end %>
+</section>
