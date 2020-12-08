@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Attendance, type: :model do
@@ -19,7 +17,7 @@ RSpec.describe Attendance, type: :model do
       @event = @user.created_events.create(title: 'title', desc: 'description', date: Date.today, location: 'location')
       @attendance = Attendance.create(user_id: @user.id, event_id: @event.id)
 
-      expect(Attendance.first.user).to  eq(@user)
+      expect(Attendance.first.user).to eq(@user)
       expect(Attendance.first.event).to eq(@event)
     end
   end

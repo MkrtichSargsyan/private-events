@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class Event < ApplicationRecord # rubocop:todo Style/Documentation
+class Event < ApplicationRecord
   validates :title, :desc, :location, :date, presence: true
 
   belongs_to :creator, class_name: 'User'

@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class Attendance < ApplicationRecord # rubocop:todo Style/Documentation
+class Attendance < ApplicationRecord
   belongs_to :user
   belongs_to :event
 end
