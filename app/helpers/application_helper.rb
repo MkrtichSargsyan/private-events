@@ -37,7 +37,9 @@ module ApplicationHelper
     if event.attendances.exists?(user_id: current_user.id)
       '<p>Already signed in</p>'.html_safe
     else
+      # rubocop:disable LineLength
       (link_to 'Join', join_attendances_path(id: @event.id), class: 'btn btn-primary mb-4', method: :post).to_s.html_safe
+      # rubocop:enable LineLength
     end
   end
 
