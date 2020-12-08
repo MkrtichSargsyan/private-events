@@ -23,7 +23,7 @@ In this project, I built a private events app.It allows users to create events a
 
 ## Live Demo
 
-<a href= "https://fight-club01.herokuapp.com/" target="_blank">Live version</a>
+<a href= "https://private-events01.herokuapp.com/" target="_blank">Live version</a>
 
 ## Author
 
