@@ -42,8 +42,8 @@ module ApplicationHelper
   end
 
   def show_create_event_button
-    if current_user 
-      (link_to 'Create new event', new_event_path, class: 'nav-link text-info').to_s.html_safe
-    end
+    return unless current_user
+
+    (link_to 'Create new event', new_event_path, class: 'nav-link text-info').to_s.html_safe
   end
 end
