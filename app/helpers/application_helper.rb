@@ -1,4 +1,6 @@
-module ApplicationHelper
+# frozen_string_literal: true
+
+module ApplicationHelper # rubocop:todo Style/Documentation
   def show_user_name(current_user)
     if signed_in?
       "<li class='nav-item'>
@@ -42,6 +44,8 @@ module ApplicationHelper
   end
 
   def show_create_event_button
-    (link_to 'Create new event', new_event_path, class: 'nav-link text-info').to_s.html_safe if current_user
+    if current_user # rubocop:todo Style/GuardClause
+      (link_to 'Create new event', new_event_path, class: 'nav-link text-info').to_s.html_safe
+    end
   end
 end

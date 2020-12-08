@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'events/upcoming', to: 'events#show_upcoming'
   get 'events/past', to: 'events#show_past'

@@ -1,5 +1,7 @@
-class EventsController < ApplicationController
+# frozen_string_literal: true
 
+# rubocop:todo Style/Documentation
+class EventsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
@@ -19,7 +21,7 @@ class EventsController < ApplicationController
     @event = current_user.created_events.build(event_params)
     @event.save
     if @event.save
-      redirect_to @event, notice: "Your event was created"
+      redirect_to @event, notice: 'Your event was created'
     else
       render :new
     end
@@ -39,3 +41,4 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :date, :location, :desc)
   end
 end
+# rubocop:enable Style/Documentation

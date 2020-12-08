@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Attendance, type: :model do
@@ -13,12 +15,12 @@ RSpec.describe Attendance, type: :model do
     end
 
     it 'should have an user and event' do
-      @user = User.create(name:'John',email:'d@gmail.com',password:'aaaaaa')
-      @event = @user.created_events.create(title:'title',desc:'description',date:Date.today,location:'location')
-      @attendance = Attendance.create(user_id:@user.id,event_id:@event.id)
+      @user = User.create(name: 'John', email: 'd@gmail.com', password: 'aaaaaa')
+      @event = @user.created_events.create(title: 'title', desc: 'description', date: Date.today, location: 'location')
+      @attendance = Attendance.create(user_id: @user.id, event_id: @event.id)
 
       expect(Attendance.first.user).to  eq(@user)
-      expect(Attendance.first.event).to  eq(@event)
+      expect(Attendance.first.event).to eq(@event)
     end
   end
 end

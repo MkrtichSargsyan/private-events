@@ -1,10 +1,11 @@
-class UsersController < ApplicationController
+# frozen_string_literal: true
+
+class UsersController < ApplicationController # rubocop:todo Style/Documentation
   def index
     @users = User.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @user = User.new
@@ -20,5 +21,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end
-
 end
