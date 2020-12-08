@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# rubocop:todo Style/Documentation
 class EventsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
@@ -41,4 +38,3 @@ class EventsController < ApplicationController
     params.require(:event).permit(:title, :date, :location, :desc)
   end
 end
-# rubocop:enable Style/Documentation
