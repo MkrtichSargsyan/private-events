@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
   def show
     if signed_in?
-      @upcoming = current_user.created_events.upcoming_events
-      @past = current_user.created_events.past_events
+      @created_events = current_user.created_events
+      @attended_events = current_user.event_attended
     else
       redirect_to login_path
     end
