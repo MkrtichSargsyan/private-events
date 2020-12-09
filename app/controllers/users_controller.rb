@@ -3,7 +3,14 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show; end
+  def show
+    if signed_in?
+      @upcoming = current_user.created_events.upcoming_events
+      @past = current_user.created_events.past_events
+    else
+      redirect_to login_path
+    end
+  end
 
   def new
     @user = User.new

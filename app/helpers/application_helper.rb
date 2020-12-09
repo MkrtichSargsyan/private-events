@@ -2,7 +2,9 @@ module ApplicationHelper
   def show_user_name(current_user)
     if signed_in?
       "<li class='nav-item'>
-        <div class='nav-link text-white'>Logged in as [ <strong  >#{current_user.email} </strong>] </div>
+        <div class='nav-link text-white'>
+          Logged in as [ <strong  >#{link_to current_user.name, user_path(current_user) } </strong>] 
+        </div>
       </li>
       <li class='nav-item'>
          #{link_to 'logout', destroy_user_session_path, class: 'nav-link text-white', method: :delete}
