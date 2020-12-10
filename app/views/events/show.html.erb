@@ -1,0 +1,33 @@
+<section>
+  <div class='d-flex align-items-center mt-4'>
+    <p class='text-secondary m-0 mr-3 event_characteristics_width'>Event title :</p>
+    <h1 class='font-weight-bold'><%= @event.title.titleize %></h1>
+  </div>
+  <div class='d-flex align-items-center'>
+    <p class='text-secondary m-0 mr-3 event_characteristics_width'>Created by :</p>
+    <h5 class='font-weight-bold mb-0'>
+      <%= @event.creator.name %>
+    </h5>
+  </div>
+  <div class='d-flex align-items-center'>
+    <p class='text-secondary m-0 mr-3 event_characteristics_width'>Date :</p>
+    <h5 class='font-weight-bold mb-0'><%= @event.date.strftime("%d %b, %Y at %l:%M %p") %></h5> 
+  </div>
+  <div class='d-flex align-items-center mb-4'>
+    <p class='text-secondary m-0 mr-3 event_characteristics_width'>Location :</p>
+    <h5 class='font-weight-bold mb-0'><%= @event.location %></h5>
+  </div>
+  <%= show_registration_button(@event) %>
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-8 event_description">
+        <h2>Description</h2>
+        <p><%= @event.desc %></p>
+      </div>
+      <div class="col-3 event_description">
+        <h2>Attendees</h2>
+        <%= show_attendees(@attendees)  %>
+      </div>
+    </div>
+  </div>
+</section>

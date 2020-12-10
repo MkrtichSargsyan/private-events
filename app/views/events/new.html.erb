@@ -1,0 +1,33 @@
+<section class='mt-5'>
+  <%= form_with model: @event, local: true do |f| %>
+    <% if @event.errors.any? %>
+      <ul>
+        <% @event.errors.full_messages.each do |error| %>
+          <li> <%= error %> </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <div class='m-auto col-6'>
+      <div class="form-group d-flex align-items-center">
+        <%= f.label :title,'Title:', class:'m-0 col-4 m-0 h3' %>
+        <%= f.text_field :title, placeholder: "Event title", class: "form-control col-8"  %>
+      </div>
+      <div class="form-group d-flex align-items-center">
+        <%= f.label :desc,'Description:', class:'m-0 col-4 m-0 h3' %>
+        <%= f.text_area :desc, placeholder: "Event description", class: "form-control col-8"  %>
+      </div>
+      <div class="form-group d-flex align-items-center">
+      <%= f.label :date,'Date:', class:'m-0 col-4 m-0 h3' %>
+        <%= f.date_field :date, class: "form-control col-8"  %>
+      </div>
+
+    <div class="form-group d-flex align-items-center">
+    <%= f.label :date,'Location:', class:'m-0 col-4 m-0 h3' %>
+      <%= f.text_field :location, placeholder: "Event location", class: "form-control col-8"  %>
+    </div>
+
+    <%= f.submit class: "btn btn-outline-primary mt-3 ml-3" %>
+    </div>
+
+  <% end %>
+</section>
