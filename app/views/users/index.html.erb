@@ -1,0 +1,19 @@
+<section class="container">
+  <div class='row'>
+    <% @users.each do |user| %>
+      <div class="user_card card text-center m-2">
+        <div class="card-header">
+          <h2><%= user.name %></h2>
+          <h5><%= user.email %></h5>
+        </div>
+        <div class="card-body">
+          <p>Created events - <%= user.created_events.count %> </p>
+          <p>Joined events - <%= user.attendances.count %> </p>
+        </div>
+        <div class="card-footer text-muted">
+          2 days ago
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

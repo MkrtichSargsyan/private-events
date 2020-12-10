@@ -1,0 +1,34 @@
+@import "bootstrap/scss/bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: beige;
+}
+
+.navbar {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 30%, rgb(36, 35, 35) 70%, rgba(0, 0, 0, 1) 100%);
+  color: white;
+}
+
+.devise_form {
+  background-color: #a0a08f;
+  box-shadow: 8px 7px 10px 6px rgba(23, 2, 11, 0.55);
+}
+
+.user_card {
+  width: 31%;
+}
+
+.event_description {
+  background-color: burlywood;
+  box-shadow: 5px 5px 15px 5px #000;
+}
+
+.event_characteristics_width {
+  width: 100px;
+}
