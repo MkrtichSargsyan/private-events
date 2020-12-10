@@ -28,7 +28,7 @@ class EventsController < ApplicationController
     @upcoming_events = Event.upcoming_events
   end
 
-  def past_events
+  def show_past
     @past_events = Event.past_events
   end
 
