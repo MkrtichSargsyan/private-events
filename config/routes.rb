@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'events/past', to: 'events#show_past'
 
   devise_for :users
-  resources :users
-  resources :events
+  resources :users, only: %w[index show new,create]
+  resources :events, only: %w[index show new create]
 
   resources :attendances
 
